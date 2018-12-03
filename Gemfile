@@ -1,5 +1,6 @@
-source "http://rubygems.org"
+source 'http://rubygems.org'
 
-gem "rake"
-gem "minitest-rg"
-gem "fuzzy_match"
+gem 'rake'
+gem 'minitest-rg'
+gem 'fuzzy_match'
+gem 'rubocop'

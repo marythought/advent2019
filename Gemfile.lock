@@ -1,11 +1,28 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    ast (2.4.0)
     fuzzy_match (2.1.0)
+    jaro_winkler (1.5.1)
     minitest (5.11.3)
     minitest-rg (5.2.0)
       minitest (~> 5.0)
+    parallel (1.12.1)
+    parser (2.5.3.0)
+      ast (~> 2.4.0)
+    powerpack (0.1.2)
+    rainbow (3.0.0)
     rake (12.3.1)
+    rubocop (0.57.2)
+      jaro_winkler (~> 1.5.1)
+      parallel (~> 1.10)
+      parser (>= 2.5)
+      powerpack (~> 0.1)
+      rainbow (>= 2.2.2, < 4.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (~> 1.0, >= 1.0.1)
+    ruby-progressbar (1.10.0)
+    unicode-display_width (1.4.0)
 
 PLATFORMS
   ruby
@@ -14,6 +31,7 @@ DEPENDENCIES
   fuzzy_match
   minitest-rg
   rake
+  rubocop
 
 BUNDLED WITH
    1.16.6
