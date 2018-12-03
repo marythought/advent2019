@@ -8,12 +8,15 @@ describe '3' do
   it 'returns accurate test data' do
     grid = Day3.new
     assert_equal 4, grid.part_1_3(test_input)
-    # assert_equal '3', grid.part_2_3(test_input)
+    grid = Day3.new
+    assert_equal '3', grid.part_2_3(test_input)
   end
 
   it 'returns a valid result' do
     grid2 = Day3.new
     assert_equal 111_485, grid2.part_1_3(input)
-    # assert_nil grid.part_2_3(input) # not 1208
+    grid2 = Day3.new
+    # this works but it takes forever
+    assert_equal 113, grid2.part_2_3(input)
   end
 end

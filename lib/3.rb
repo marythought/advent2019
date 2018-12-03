@@ -30,5 +30,27 @@ class Day3
   end
 
   def part_2_3(inputs)
+    intact_squares = {}
+    inputs.each do |input|
+      regex = /(\d+),(\d+): (\d+)x(\d+)/
+      x_axis, y_axis, width, height = regex.match(input)[1..4].map(&:to_i)
+      intact = true
+      these_coords = []
+      width.times do |i|
+        x = x_axis + i
+        height.times do |j|
+          y = y_axis + j
+          @grid[[x, y]] += 1
+          these_coords << [x, y]
+          if @grid[[x, y]] > 1
+            intact = false
+            intact_squares.delete_if { |_, v| v.include?([x, y]) }
+          end
+        end
+      end
+      intact_squares[input] = these_coords if intact
+    end
+    regex = /#(\d+)/
+    regex.match(intact_squares.keys[0])[1]
   end
 end
